@@ -21,22 +21,44 @@ public class Project1 {
         int price=40;
         System.out.println("Enter the age");
         int age=num.nextInt();
-        System.out.println("Enter your country name");
-        String country=num.next();
-        if(country.equals("warren"))
-        {
-        }
+        
         if(age<5)
         {
             price=0;
+             System.out.println("price :$"+price+".00");
         }
-        if(age>=65)
-        {
-           price=price-price*50/100; 
-           System.out.println("price :$"+price+".00");
+        else{
+            System.out.println("Enter your country name");
+            String country=num.next();
+            
+            if(country.equals("warren"))
+            {
+                price=30;
+                if(age>=65)
+                {
+                   price=price-price*50/100; 
+                   System.out.println("price :$"+price+".00");
+                }
+                else
+                    System.out.println("$"+price+".00");
+
+            }
+            else{
+                if(age>=65)
+                {
+                   price=price-price*50/100; 
+                   System.out.println("price :$"+price+".00");
+                }
+                else
+                    System.out.println("$"+price+".00");
+
+        
         }
-        else
-            System.out.println("$"+price+".00");
+        
+            
+        }
+        
+        
         
         // TODO code application logic here
     }
